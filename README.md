@@ -8,6 +8,7 @@ Tasks Completed
 2. Elasticsearch and kibana native install
 
 Questions and Tasks PENDING:
+0. WHERE IS ELASTICSEARCH LOCATED WITHIN GIT?
 1. Build docker with JHU/Harvard assets?
 2. Platform overview with deployment
 3. Docs / Wiki where? Git or somewhere else? Internal wiki?
@@ -18,6 +19,7 @@ Questions and Tasks PENDING:
 8. Any other students working on this with whom I could collaborate?
 9. Git and docker repository branch access and priveleges (also demo of how to push a demo branch to docker repo)
 10. Emberjs experiment?
+11. java fedora client? https://github.com/OA-PASS/java-fedora-client
 
 Obervations / ERRORS
 1. Logout not working on staff1 (404 not found pass.local/logout) -- working on pass.jhu.edu
