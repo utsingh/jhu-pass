@@ -22,9 +22,16 @@ Questions and Tasks PENDING:
 12. java fedora client? https://github.com/OA-PASS/java-fedora-client
 
 Obervations / ERRORS
-1. Logout not working on staff1 (404 not found pass.local/logout) -- working on pass.jhu.edu
+1. Logout not working on staff1 (404 not found pass.local/logout) -- working on pass.jhu.edu -- NO FACILITY FOR LOGOUT
 2. Login button disappeared after login. No logout option on pass.local
-3. Acceptance Errors on tests? https://pass.local/app/tests
+3. Acceptance Errors on tests? https://pass.local/app/tests -- acceptance do not pass when run locally
 
 Documentation message not reached:
 Wait for the containers to finish coming up, this could take 5-10 minutes. There will be a long pause while the ember container builds. When you see the "Build successful" message from ember and a small table listing the "Slowest Nodes" that indicates the application is ready to use. It will look similar to:
+
+
+
+Meeting Notes with Mark:
+1. ES jhu production endpoint: https://pass.jhu.edu/es
+2. PASS data model: https://github.com/OA-PASS/pass-data-model
+3. ES query (json also available): https://pass.jhu.edu/es?q=@type:Submission&size=20
