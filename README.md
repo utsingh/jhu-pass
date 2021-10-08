@@ -41,11 +41,12 @@ Meeting Notes with Mark:
 4. PASS Ember code for Ember UI. Docker not complete stack. The complete full stack is in pass-docker. 
 5. branch "minimal-assets" in https://github.com/OA-PASS/pass-docker/tree/minimal-assets should work as production equivalent version. Can develop in this if required. Eventually will need to be tested on this.
 6. The full pass docker has some services which use elasticsearch that pass-ember does not have.
+
+
 7. TODO inventory of everywhere elasticsearch is used AND WHAT SEARCHES IT DOES throughout the codebase. (check both pass-ember and pass-docker). (example ember user interface it does searches for submissions, user, search for grants that a auser is on, it does autocompletion on journal names;
 pass-indexer writes documents to teh elastic search documents, deletes documents, updates documents, maybe something else,
 java backend services deposit services searches for submissions that are ready to be submitted, grant loader services searches by award number, etc etc)
 
-QUESTIONS:
 8. 3 other students working on it. are on slack.
 9. assets image, jhu data in it, used in production.
 10. it might get in the way that we don't have access to assets jhu.
