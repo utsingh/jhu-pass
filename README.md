@@ -5,6 +5,8 @@ https://github.com/OA-PASS/pass-ember
 
 FRIDAYS 3pm.
 
+Meeting #1 Recording: https://www.icloud.com/iclouddrive/00XNVmyign9THHb2uDukkfR5g#zoom_0
+
 
 Tasks Completed
 1. Docker public image build
