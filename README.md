@@ -86,3 +86,7 @@ Meeting #2: Friday, October 15, 2021 3pm
 #TASKS PENDING
 1. Documentation of elasticsearch occurences in codebase. (questions above)
 2. If image issues resolved, deployment of pass-docker.
+3. SHA-256 code for 7.15? Necessary?
+
+#Exploring
+1. https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls-docker.html
