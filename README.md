@@ -76,17 +76,17 @@ __________________________________________________________________________
 
 Meeting #2: Friday, October 15, 2021 3pm
 
-#TASKS Completed
+# TASKS Completed
 
 1. pass-ember upgraded to elasticsearch 7.15
 2. pass-docker tried with public image (added docker-public yaml) -- FAILED
 3. Question: Not sure which one is the elasticsearch variable in .env? Ask for details about modifying .env, and options for running pass-docker.
 4. Share error in pass-docker deployment (with and without public image)
 
-#TASKS PENDING
+# TASKS PENDING
 1. Documentation of elasticsearch occurences in codebase. (questions above)
 2. If image issues resolved, deployment of pass-docker.
 3. SHA-256 code for 7.15? Necessary?
 
-#Exploring
+## Exploring
 1. https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls-docker.html
