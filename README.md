@@ -70,3 +70,15 @@ written in java / GO
 23. AWS EKS is used in production. they don't use docker compose, a seperate definition file in EKS is written. 
 
 24. submit pull request for SOC4.
+
+
+__________________________________________________________________________
+
+Meeting #2: Friday, October 15, 2021 3pm
+
+#TASKS Completed
+
+1. pass-ember upgraded to elasticsearch 7.15
+2. pass-docker tried with public image (added docker-public yaml) -- FAILED
+3. Question: Not sure which one is the elasticsearch variable in .env?
+4. Share error in pass-docker deployment (with and without public image)
