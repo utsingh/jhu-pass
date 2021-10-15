@@ -97,4 +97,5 @@ __________________________________________________________________________
 1. https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls-docker.html
 
 ## Meeting Notes with Mark and Derek
-1. 
+1. docker inspect docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+2. update object in fedora and see how elasticsearch indexes the new object in 7.1.5
