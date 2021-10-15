@@ -126,3 +126,9 @@ Do a submission workflow and keep an eye on network flow in dev tools that may h
 16. Look through the code. If you have your docker compose setup properly, you can look up elastic search directly instead of through the proxy.
 
 17. pagination is not implemented yet. We need to have the tables be paged. Note: if more search results are returned then searches only return 20 results. What happens if 21 results are found.
+
+18. Create a document. Sections and components (populate the list from OA-pass repositories list) -- ignore the non-software repositories.
+If the component does not use ES, note an dmove on.
+If it does use ES, pass-indexer creates documents does not do queries. Note teh use, examples, how can i test this compoennt that it works with ES7. SOme existing integration tests, in some cases might have to manually testing. How do i do the tests has to be thought about.
+How can we test everything systematically instead of manually firing up.
+Do i notice any problems with how this component is using ES?
