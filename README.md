@@ -1,18 +1,24 @@
-OA-PASS
+# OA-PASS
 
-https://github.com/OA-PASS/pass-ember
+URL: https://github.com/OA-PASS/pass-ember
 
+# Meeting Recordings
 
-FRIDAYS 3pm.
+### Meetings FRIDAYS 3pm.
 
 Meeting #1 Recording: https://www.icloud.com/iclouddrive/00XNVmyign9THHb2uDukkfR5g#zoom_0
 
+Meeting #2 Recording: 
 
-Tasks Completed
+____________________________________________________________________
+
+# Meeting#1
+
+## Tasks Completed
 1. Docker public image build
 2. Elasticsearch and kibana native install
 
-Questions and Tasks PENDING:
+## Questions and Tasks PENDING:
 1. WHERE IS ELASTICSEARCH LOCATED WITHIN GIT?
 2. Build docker with JHU/Harvard assets?
 3. Platform overview with deployment. NO
@@ -26,7 +32,7 @@ Questions and Tasks PENDING:
 11. Emberjs experiment?
 12. java fedora client? https://github.com/OA-PASS/java-fedora-client
 
-Obervations / ERRORS
+## Obervations / ERRORS
 1. Logout not working on staff1 (404 not found pass.local/logout) -- working on pass.jhu.edu -- NO FACILITY FOR LOGOUT
 2. Login button disappeared after login. No logout option on pass.local
 3. Acceptance Errors on tests? https://pass.local/app/tests -- acceptance do not pass when run locally
@@ -35,8 +41,7 @@ Documentation message not reached:
 Wait for the containers to finish coming up, this could take 5-10 minutes. There will be a long pause while the ember container builds. When you see the "Build successful" message from ember and a small table listing the "Slowest Nodes" that indicates the application is ready to use. It will look similar to:
 
 
-
-Meeting Notes with Mark:
+## Meeting Notes with Mark and Derek:
 1. ES jhu production endpoint: https://pass.jhu.edu/es
 2. PASS data model: https://github.com/OA-PASS/pass-data-model
 3. ES query (json also available): https://pass.jhu.edu/es?q=@type:Submission&size=20
@@ -74,19 +79,22 @@ written in java / GO
 
 __________________________________________________________________________
 
-Meeting #2: Friday, October 15, 2021 3pm
+# Meeting #2: Friday, October 15, 2021 3pm
 
-# TASKS Completed
+## TASKS Completed
 
 1. pass-ember upgraded to elasticsearch 7.15
 2. pass-docker tried with public image (added docker-public yaml) -- FAILED
 3. Question: Not sure which one is the elasticsearch variable in .env? Ask for details about modifying .env, and options for running pass-docker.
 4. Share error in pass-docker deployment (with and without public image)
 
-# TASKS PENDING
+## TASKS PENDING
 1. Documentation of elasticsearch occurences in codebase. (questions above)
 2. If image issues resolved, deployment of pass-docker.
 3. SHA-256 code for 7.15? Necessary?
 
-## Exploring
+### Exploring
 1. https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls-docker.html
+
+## Meeting Notes with Mark and Derek
+1. 
