@@ -99,3 +99,30 @@ __________________________________________________________________________
 ## Meeting Notes with Mark and Derek
 1. docker inspect docker.elastic.co/elasticsearch/elasticsearch:7.15.1
 2. update object in fedora and see how elasticsearch indexes the new object in 7.1.5
+3. look through pass-ember. pass-ember does a search for grants user. pass-ember does a special auto-complete search ... etc etc
+4. pass-ember is very different (javascript) is very different than batch loader (pass grants) using the fedora java client.
+5. START WITH PASS-EMBER OR PASS JAVA CLIENT for documentation of where elasticsearch exists in codebase.
+6. Testing the java client, minimal yaml file with repository, indexer an delasticsearch. Run tetss against it with the java client (integration tests). Then change the version of the elasticsearch and see is all tests pass. What the elasticsearch calls are, and how do i do a test on that component to make sure 
+7. Documentation is next step. For each component figure out how am i going to test that it works with ES7. Most cases will have existing integration tests. Testing with ES7 will be as simple as updating the configuratioin of the integration tests to use the ES7. 
+8. Integration tests, manual work looking through code. Pass integration tetss are put togetehr in maven. Poking around needed!
+9. There may be the case that there arent any integration tests.
+10. Code for the component that is usually unit tests, and integrtaion module for the integration tests. 
+11. Start by looking through each repositories of OA-PASS. Each component is not necessarily utilized.
+
+12. Mark DEMO: pass-ember: UI extensive use of elastic search to do different things. Dependency on ember-fedora adapter.
+How javascript interacts with ES and also has integration tests in 'tests'. Description in readme file to run integration tests.
+How does it use ES? app/adapters/fedora-jsonid.js Line 190 QUERY method. using elasticsearchURI .
+Inside app>routes>grants>index.js when ember app visits the /grants routes, it's going to serve out a html template to user and that template is this. grantquery sorts on enddate and range, PI must be logged in user, this.store.query (each store.query will run ES).
+Some magic in .env and ember config directory.
+
+13. log in as nih-user which has 1 grant/submission keep dev tools open, open /grant and you'll see that search being run.
+
+14. Autocomplete service: does a complicated elasticsearch query suggesting how to complete teh prefix of something. Happens when you're trying to find an existing publication.
+App/services/autocomplete.js
+Do a submission workflow and keep an eye on network flow in dev tools that may have hints of servcies being called. POST cna go to elasticsearch.
+
+15. Within network > es > scroll down and look for request payload in headers.
+
+16. Look through the code. If you have your docker compose setup properly, you can look up elastic search directly instead of through the proxy.
+
+17. pagination is not implemented yet. We need to have the tables be paged. Note: if more search results are returned then searches only return 20 results. What happens if 21 results are found.
