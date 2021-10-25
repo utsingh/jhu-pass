@@ -1,8 +1,10 @@
 # Java Fedora Client
 
-## grep -inr "docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3" .
+## upgrade elasticsearch 7 in java fedora client
+grep -inr "docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3" .
 ./pom.xml:130:              <name>docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3</name>
- --> Change this to "docker.elastic.co/elasticsearch/elasticsearch:7.15.1"
+
+--> Change this to "docker.elastic.co/elasticsearch/elasticsearch:7.15.1"
 
 ## grep -inr "elasticsearch" .
 
