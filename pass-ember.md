@@ -2,23 +2,23 @@
 * extensive use of ElasticSearch for autocomplete, queries, etc
 
 ### docker config variables
-./.docker/.harvard_env:53:PASS_ELASTICSEARCH_URL=http://elasticsearch:9200
-./.docker/.harvard_env:69:# Elasticsearch config
-./.docker/.harvard_env:78:PI_ES_BASE=http://elasticsearch:9200/
-./.docker/.harvard_env:79:PI_ES_INDEX=http://elasticsearch:9200/pass/
-./.docker/.env:44:PASS_ELASTICSEARCH_URL=http://elasticsearch:9200
-./.docker/.env:48:# Elasticsearch config
-./.docker/.env:57:PI_ES_BASE=http://elasticsearch:9200/
-./.docker/.env:58:PI_ES_INDEX=http://elasticsearch:9200/pass/
-./.docker/docker-compose.yml:117:  elasticsearch:
-./.docker/docker-compose.yml:118:    #image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3@sha256:ccfad77c0731c010e6ff8c43b4ab50f5ce90c0fa4e65846530779c5c6707c20a
-./.docker/docker-compose.yml:119:    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
-./.docker/docker-compose.yml:120:    container_name: elasticsearch
-./.docker/docker-compose.yml:131:      - passdata:/usr/share/elasticsearch/data
-./.docker/harvard.yml:107:  elasticsearch:
-./.docker/harvard.yml:108:    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3@sha256:ccfad77c0731c010e6ff8c43b4ab50f5ce90c0fa4e65846530779c5c6707c20a
-./.docker/harvard.yml:109:    container_name: elasticsearch
-./.docker/harvard.yml:120:      - passdata-harvard:/usr/share/elasticsearch/data
+- ./.docker/.harvard_env:53:PASS_ELASTICSEARCH_URL=http://elasticsearch:9200
+- ./.docker/.harvard_env:69:# Elasticsearch config
+- ./.docker/.harvard_env:78:PI_ES_BASE=http://elasticsearch:9200/
+- ./.docker/.harvard_env:79:PI_ES_INDEX=http://elasticsearch:9200/pass/
+- ./.docker/.env:44:PASS_ELASTICSEARCH_URL=http://elasticsearch:9200
+- ./.docker/.env:48:# Elasticsearch config
+- ./.docker/.env:57:PI_ES_BASE=http://elasticsearch:9200/
+- ./.docker/.env:58:PI_ES_INDEX=http://elasticsearch:9200/pass/
+- ./.docker/docker-compose.yml:117:  elasticsearch:
+- ./.docker/docker-compose.yml:118:    #image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3@sha256:ccfad77c0731c010e6ff8c43b4ab50f5ce90c0fa4e65846530779c5c6707c20a
+- ./.docker/docker-compose.yml:119:    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+- ./.docker/docker-compose.yml:120:    container_name: elasticsearch
+- ./.docker/docker-compose.yml:131:      - passdata:/usr/share/elasticsearch/data
+- ./.docker/harvard.yml:107:  elasticsearch:
+- ./.docker/harvard.yml:108:    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3@sha256:ccfad77c0731c010e6ff8c43b4ab50f5ce90c0fa4e65846530779c5c6707c20a
+- ./.docker/harvard.yml:109:    container_name: elasticsearch
+- ./.docker/harvard.yml:120:      - passdata-harvard:/usr/share/elasticsearch/data
 
 ### APP
 
