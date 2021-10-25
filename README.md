@@ -137,6 +137,8 @@ __________________________________________________________________________
 
 # Meeting #3: Monday, Oct 25, 2021 2pm
 
+Meeting Recording: 
+
 ## TASKS Completed
 
 1. Systematic documentation of elasticsearch across all repos in OA-Pass
@@ -147,4 +149,18 @@ __________________________________________________________________________
 
 ## Notes
 1. pass-ember: ignore everything in dist. it's compiled code of ember.
-2. 
+2. ember-fedora-adapter is being used within pass-ember. that adapter is using 'store.query'. run grep with that term in ember-fedora-adapter.
+3. FORMAT OF SUBMISSION: name of repository, has/does not have integration tests, and these are the queries being run.
+4. docker compose up -d
+maven install
+to get it running and then run tests with maven
+5. pass-data-model make a note that index configuration is stored there
+6. grant-loader has integration tests, testing interactions with fedora repository, authorized stack, etc
+only interaction that grant-loader is through java-client. so no need to test it seperately.
+7. check that grant-loader uses java-client. then find teh variable from java client and grep that in grant-loader and other loaders.
+8. PASS is going to become a project of the eclipse foundation. reviewing some architectural decisions.
+
+## TASKS Pending
+1. Format everything better. Make an architectural diagram of elasticsearch occurences.
+2. Look backwards from Java clients, loaders and download services and similar things. Ignore integration tests in repositories that are running from the java client. Find integration tests in others, and in Go client.
+3. FORMAT FORMAT FORMAT!
