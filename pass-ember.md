@@ -45,7 +45,6 @@
 ### Dist setup
 ./dist/index.html:10:<meta name="pass-ember/config/environment" 
 ./dist/tests/index.html:11:<meta name="pass-ember/config/environment"
-
 ./dist/assets/pass-ember.js:33:      (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "elasticsearchURI", _environment.default.fedora.elasticsearch);
 ./dist/assets/pass-ember.js:62:  //   elasticsearchURI: Absolute URI of Elasticsearch search service.
 ./dist/assets/pass-ember.js:130:    // Return a Promise which clears the specified Elasticsearch index

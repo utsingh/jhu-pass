@@ -1,0 +1,15 @@
+./pass-grant-cli/src/main/java/org/dataconservancy/pass/grant/cli/BaseGrantLoaderApp.java:121:        "pass.elasticsearch.url", "pass.elasticsearch.limit"};
+./pass-grant-integration/pom.xml:130:                                    <PI_ES_BASE>http://elasticsearch:9200/</PI_ES_BASE>
+./pass-grant-integration/pom.xml:131:                                    <PI_ES_INDEX>http://elasticsearch:9200/pass/</PI_ES_INDEX>
+./pass-grant-integration/pom.xml:139:                                    <link>elasticsearch</link>
+./pass-grant-integration/pom.xml:153:                            <alias>elasticsearch</alias>
+./pass-grant-integration/pom.xml:154:                            <name>docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3</name>
+./pass-grant-integration/pom.xml:168:                                    <alias>elasticsearch</alias>
+./pass-grant-integration/pom.xml:205:                        <pass.elasticsearch.url>http://${ES_HOST}:${ES_PORT}</pass.elasticsearch.url>
+./pass-grant-integration/src/test/java/org/dataconservancy/pass/grant/integration/BasicPassUpdaterIT.java:437:        sleep(20000); //allow indexer to index stuff - java client has to use elasticsearch
+./pass-grant-integration/src/test/java/org/dataconservancy/pass/grant/integration/BasicPassUpdaterIT.java:474:        sleep(20000); //allow indexer to index stuff - java client has to use elasticsearch
+./pass-grant-integration/src/test/java/org/dataconservancy/pass/grant/integration/BasicPassUpdaterIT.java:492:        sleep(20000); //allow indexer to index stuff - java client has to use elasticsearch
+./JHU-README.md:60:#### Fedora and Elasticsearch configuration (`system.properties`)
+./JHU-README.md:62:can configure itself to attach to its storage and its search endpoint - in our case, a Fedora instance and an Elasticsearch instance. The base URL must contain
+./JHU-README.md:68:`pass.elasticsearch.url=`\
+./JHU-README.md:69:`pass.elasticsearch.limit=`
