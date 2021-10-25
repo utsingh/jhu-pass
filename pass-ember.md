@@ -1,5 +1,5 @@
 # pass-ember
-* extensive use of ElasticSearch for autocomplete, queries, etc
+*extensive use of ElasticSearch for autocomplete, queries, etc
 
 ### docker config variables
 - ./.docker/.harvard_env:53:PASS_ELASTICSEARCH_URL=http://elasticsearch:9200
