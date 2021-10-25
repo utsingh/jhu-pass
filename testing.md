@@ -125,7 +125,10 @@ Implements the following ES methods:
 
 ./README.md:94:## Integration tests with Fedora and Elasticsearch
 ./README.md:96:The integration test module `pass-client-integration` uses Docker to spin up an instance of Fedora and Elasticsearch for testing the client against.
+
 ./README.md:102:This will run Fedora at standard port (8080) and Elasticsearch at port 9200. This mode is very useful for testing/debugging/developing against the databases from within the IDE.   Repository content is stored in `target`, so if it is run after integration tests, the repository will still retain all data deposited during.
+
 Binary file ./.git/index matches
+
 ./.travis.yml:34:  - docker logs elasticsearch
 
