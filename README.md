@@ -132,3 +132,15 @@ If the component does not use ES, note an dmove on.
 If it does use ES, pass-indexer creates documents does not do queries. Note teh use, examples, how can i test this compoennt that it works with ES7. SOme existing integration tests, in some cases might have to manually testing. How do i do the tests has to be thought about.
 How can we test everything systematically instead of manually firing up.
 Do i notice any problems with how this component is using ES?
+
+__________________________________________________________________________
+
+# Meeting #3: Monday, Oct 25, 2021 2pm
+
+## TASKS Completed
+
+1. Systematic documentation of elasticsearch across all repos in OA-Pass
+2. pass-ember, java-fedora-client, pass-docker, pass-data-model detailed docs
+
+## Integration Testing
+1. ran java-fedora-client, seems to pass all tests, still need help to make sure that assumption is correct.
