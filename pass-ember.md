@@ -35,7 +35,7 @@
 ./app/services/search-helper.js:6: * This service can be referenced by components that rely on Elasticsearch query results
 ./app/services/search-helper.js:74:   * Wait for Elasticsearch to be reindexed with the given value.
 
-2. Autocomplete: provides autocomplete feature during search on UI.
+2. Autocomplete: provides autocomplete feature during search on UI. Does a complicated elasticsearch query suggesting how to complete the prefix of something. Happens when you're trying to find an existing publication.
 ./app/services/autocomplete.js:6: * Service designed to hit the Elasticsearch autocomplete service to get suggestions
 ./app/services/autocomplete.js:23:    return ENV.fedora.elasticsearch;
 ./app/services/autocomplete.js:112:   * Adapt Elasticsearch results to a flat array.
@@ -72,9 +72,13 @@
 ./dist/assets/pass-ember.js:19908:        return _environment.default.fedora.elasticsearch;
 ./dist/assets/pass-ember.js:21343:   * This service can be referenced by components that rely on Elasticsearch query results
 ./dist/assets/pass-ember.js:21426:       * Wait for Elasticsearch to be reindexed with the given value.
+./dist/assets/pass-ember.map:1: PUT INTO pass-ember-75.md
 
+### Environment Configs
 ./config/environment.js:66:    elasticsearch: 'http://localhost:9200/pass/_search'
 ./config/environment.js:128:    ENV.fedora.elasticsearch = process.env.FEDORA_ADAPTER_ES;
+
+### README
 ./README.md:10:Objects persisted to Fedora are automatically indexed by Elasticsearch. See
 ./README.md:12:Note that the indexing process is asynchronous. An object persisted to Fedora will not immediately be available in Elasticsearch.
 ./README.md:53:* Elasticsearch index search endpoint is at https://pass.local/es/
