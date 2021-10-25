@@ -1,3 +1,7 @@
+# pass-ember
+* extensive use of ElasticSearch for autocomplete, queries, etc
+
+### docker config variables
 ./.docker/.harvard_env:53:PASS_ELASTICSEARCH_URL=http://elasticsearch:9200
 ./.docker/.harvard_env:69:# Elasticsearch config
 ./.docker/.harvard_env:78:PI_ES_BASE=http://elasticsearch:9200/
@@ -15,17 +19,30 @@
 ./.docker/harvard.yml:108:    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3@sha256:ccfad77c0731c010e6ff8c43b4ab50f5ce90c0fa4e65846530779c5c6707c20a
 ./.docker/harvard.yml:109:    container_name: elasticsearch
 ./.docker/harvard.yml:120:      - passdata-harvard:/usr/share/elasticsearch/data
+
+### APP
+
+#### adapter provides an adapter from fedora into elasticsearch.
 ./app/adapters/application.js:9:  elasticsearchURI = ENV.fedora.elasticsearch;
+
+#### Routes helps store the results returned from ES.
 ./app/routes/dashboard.js:22:    let approvalResults = await this.ajax.post(ENV.fedora.elasticsearch, {
 ./app/routes/dashboard.js:38:    let editsResults = await this.ajax.post(ENV.fedora.elasticsearch, {
+
+#### Services have a bunch of different kinds of services like autocomplete, search-helper, etc.
+
+1. Search Helper: service to help other components that rely on ES.
 ./app/services/search-helper.js:6: * This service can be referenced by components that rely on Elasticsearch query results
 ./app/services/search-helper.js:74:   * Wait for Elasticsearch to be reindexed with the given value.
+
+2. Autocomplete: provides autocomplete feature during search on UI.
 ./app/services/autocomplete.js:6: * Service designed to hit the Elasticsearch autocomplete service to get suggestions
 ./app/services/autocomplete.js:23:    return ENV.fedora.elasticsearch;
 ./app/services/autocomplete.js:112:   * Adapt Elasticsearch results to a flat array.
 ./app/services/autocomplete.js:115:   * 'response.suggest' is where Elasticsearch sticks the autocomplete suggestions.
 ./app/services/autocomplete.js:122:   * @param {object} response response from Elasticsearch
 
+### Dist setup
 ./dist/index.html:10:<meta name="pass-ember/config/environment" 
 ./dist/tests/index.html:11:<meta name="pass-ember/config/environment"
 
