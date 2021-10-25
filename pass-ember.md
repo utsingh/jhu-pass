@@ -109,8 +109,13 @@
 ./config/environment.js:128:    ENV.fedora.elasticsearch = process.env.FEDORA_ADAPTER_ES;
 
 ### README
+
 ./README.md:10:Objects persisted to Fedora are automatically indexed by Elasticsearch. See
+
 ./README.md:12:Note that the indexing process is asynchronous. An object persisted to Fedora will not immediately be available in Elasticsearch.
+
 ./README.md:53:* Elasticsearch index search endpoint is at https://pass.local/es/
+
 ./README.md:68:and Elasticsearch are and generally will not need to be modified during development.
+
 ./README.md:70:In order to prevent an Authorization header being sent to Fedora and Elasticsearch,
