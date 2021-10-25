@@ -144,3 +144,7 @@ __________________________________________________________________________
 
 ## Integration Testing
 1. ran java-fedora-client, seems to pass all tests, still need help to make sure that assumption is correct.
+
+## Notes
+1. pass-ember: ignore everything in dist. it's compiled code of ember.
+2. 
