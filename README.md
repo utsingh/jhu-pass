@@ -173,4 +173,40 @@ Meeting Recording:
 
 ## Meeting notes
 
-1. 
+1. ember-fedora-adapter intermediary component. put in middle. pass-ember is directly doing autocomplete. indirctly using fedora adapter for the queries.
+2. seperate them out. merge ember and fedora-adapter together.
+3. pass-indexer does NOT use the java-fedora client. does not use any ES-java client. independent. makes HTTP requests to elasticsearch directly (port 9200). pass-indexer does not do any searching into ES, it writes and deleted documents in ES index and also optinally creates an ES index. the indexer does NOT necessarily search for documents. hash functions based on fedora URI, to make sure it updates the right thing. REFER TO DESIGN in pass-indexer. monbitors fedora, and makes changes based on changes on those indexes. in some cases it modifies representations within the fedora client. <> except integrtaion tests, nothing else is writing or deleteing into ES.
+
+4. pass-indexer integration tests, docker compose up, run integration tests with maven. not automated. (maven clean install, refer to jim's email)
+
+5. deposit services is complicated. grep for java ES methods or uses of teh java fedora client.
+
+6. check pom inside each app of java-fedoraclient and check POM files inside each app.
+
+7. WITHIN PASS_DATA MODEL (now deleted) just make a note about the ES configs, elasticsearch in src/resources configs are setup. if index is created by pass-indexer, pass-indexer is creating it using the pass-data-model so testing the indexer automatically tests the pass-data-model.
+
+8. STAR: To reproduce Jim's tests, clone java-fedora client then within mac terminal itself, update the POM to requires ES version, then run 'mvn clean install'. auto deploy to docker will take place. make sure docker is empty. check container 
+
+9. grant-loader does searches for the tests. unit tests and some other tests in grant loader are not well written. refer to java-client for an intelligent way for waiting for things to sync. (looking for timeouts long enough so tests don't fail, not recommended strategy. refer to java-client for the correct way.)
+
+10. check elasticsearch refresh parameter (currently should be set at 1 sec)
+
+11. check for compilation errors on the new version while mvn clean install (jim's mail). look at the first error, not subsequent ones they could be cascading errors.
+text-mixedcase award number is teh first test failing for mark.
+(runtime exception, error while processing teh query, caused by ES status exception, indexnotfound exception no such index passed...)
+404 error on the search from http ES port.
+
+12. STAR: STACKTRACE OF THE ERRORS and look at the java code, where is the javacode that fails in the java client. see what's going on there. if it's failing, try upgrading the elastic search java library and re-run.
+
+13. NIHMS is the ETL loader, testing the java client takes care of this. this pulls down several csv files and uses teh java client. not needed to check.
+
+14. authz handles authorization, it does a lookup, uses the java client for searching (almost sure, check plz), macthes with anything contained in teh repository.
+
+15. pass-tools. written in GO. hard. there's a lib/es directory. check GO code and figure it out. (doing queries directly with http)
+
+
+### PRIMARY TASKS
+1. look deeper into the exceptions and see it that makes sense.
+2. fix the java code (upgrade teh ES search java library internally)
+3. if stuck, ping.
+4. Go code.
