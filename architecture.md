@@ -4,21 +4,27 @@ The following modules deal with the ElasticSearch implementation across teh OA-P
 
 ![flowchart](OA-Pass-ES-flowchart.drawio.png)
                                                    
+1. pass-docker (entrypoint)
+2. pass-ember (frontend)
+3. ember-fedora-adapter (frontend query storing)
+4. java-fedora-client (java backend)
+4. pass-indexer (indexing service on the backend)
+5. pass-doi-service (for searching through DOI records)
+6. deposit-services (runs several searches on teh backend)
+7. pass-grant-loader (loading services for grants)
+8. notification-services (used for passing notification information from backend to frontend)
+9. nihms-submission-etl (NIHMS submission helper)
+10. pass-authz (integration tests helper)
+11. pass-tools (internal tools)
+12. jhu-package-providers (assets providers)
+13. data-model-migration (internal)
+
 - data-model-migration.md
-- deposit-services.md
+
 - jhu-package-providers.md
-- pass-docker.md
-- pass-indexer.md
+
 - pass-tools.md
-- pass-doi-service.md
-- nihms-submission-etl.md
-- ember-fedora-adapter-store.query.md                                
-- ember-fedora-adapter.md
-- notification-services.md
-- pass-ember.md
-- java-fedora-client.md
-- pass-authz.md
-- pass-grant-loader.md
+
 
 ## java-fedora-client
 * implements the java libraries for managing elastic search queries on the backend. *
