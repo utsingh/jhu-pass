@@ -2,7 +2,7 @@
 
 The following modules deal with the ElasticSearch implementation across teh OA-Pass repository.
 
-<flowchart.png>
+![flowchart](OA-Pass-ES-flowchart.drawio.svg)
                                                    
 - data-model-migration.md
 - deposit-services.md
