@@ -1,6 +1,6 @@
 # architecture.md
 
-The following modules deal with the ElasticSearch implementation across teh OA-Pass repository.
+The following modules deal with the ElasticSearch implementation across the OA-Pass repository.
 
 ![flowchart](OA-Pass-ES-flowchart.drawio.png)
                                                    
