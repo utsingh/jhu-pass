@@ -19,12 +19,6 @@ The following modules deal with the ElasticSearch implementation across teh OA-P
 12. jhu-package-providers (assets providers)
 13. data-model-migration (internal)
 
-- data-model-migration.md
-
-- jhu-package-providers.md
-
-- pass-tools.md
-
 
 ## java-fedora-client
 * implements the java libraries for managing elastic search queries on the backend. *
