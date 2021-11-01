@@ -164,3 +164,13 @@ only interaction that grant-loader is through java-client. so no need to test it
 1. Format everything better. Make an architectural diagram of elasticsearch occurences.
 2. Look backwards from Java clients, loaders and download services and similar things. Ignore integration tests in repositories that are running from the java client. Find integration tests in others, and in Go client.
 3. FORMAT FORMAT FORMAT!
+
+__________________________________________________________________________
+
+# Meeting #4: Monday, Nov 1, 2021 2:30pm
+
+Meeting Recording: 
+
+## Meeting notes
+
+1. 
